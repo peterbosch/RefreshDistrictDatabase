@@ -1,0 +1,83 @@
+﻿using CsvHelper.Configuration;
+using RefreshDistrictDb;
+
+public class RecordMap : ClassMap<Record>
+{
+    public RecordMap()
+    {
+        Map(m => m.membership_type).Name("Membership Type");
+        Map(m => m.title).Name("Title");
+        Map(m => m.first_name).Name("First Name");
+        Map(m => m.middle_name).Name("Middle Name");
+        Map(m => m.last_name).Name("Last Name");
+        Map(m => m.nickname).Name("Nickname");
+        Map(m => m.suffix).Name("Suffix");
+        Map(m => m.username).Name("Username");
+        Map(m => m.gender).Name("Gender");
+        Map(m => m.club).Name("Club");
+        Map(m => m.club_position).Name("Club Position");
+        Map(m => m.district_defined_club_position).Name("District Defined Club Position");
+        Map(m => m.district_position).Name("District Position");
+        Map(m => m.email).Name("Email");
+        Map(m => m.alternate_email).Name("Alternate Email");
+        Map(m => m.preferred_address).Name("Preferred Address");
+        Map(m => m.preferred_address1).Name("Preferred Address1");
+        Map(m => m.preferred_address2).Name("Preferred Address2");
+        Map(m => m.preferred_city).Name("Preferred City");
+        Map(m => m.preferred_state).Name("Preferred State");
+        Map(m => m.preferred_zip_code).Name("Preferred Zip Code");
+        Map(m => m.preferred_country).Name("Preferred Country");
+        Map(m => m.address_line_1).Name("Address Line 1");
+        Map(m => m.address_line_2).Name("Address Line 2");
+        Map(m => m.city).Name("City");
+        Map(m => m.state_province).Name("State/Province");
+        Map(m => m.zip_postal_code).Name("Zip/Postal Code");
+        Map(m => m.country).Name("Country");
+        Map(m => m.preferred_phone_type).Name("Preferred Phone Type");
+        Map(m => m.preferred_phone).Name("Preferred Phone");
+        Map(m => m.home_phone).Name("Home Phone");
+        Map(m => m.home_fax).Name("Home Fax");
+        Map(m => m.pager).Name("Pager");
+        Map(m => m.cell).Name("Cell");
+        Map(m => m.business_phone).Name("Business Phone");
+        Map(m => m.business_fax).Name("Business Fax");
+        Map(m => m.company_name).Name("Company Name");
+        Map(m => m.position_title).Name("Position/Title");
+        Map(m => m.classification).Name("Classification");
+        Map(m => m.business_address1).Name("Business Address1");
+        Map(m => m.business_address2).Name("Business Address2");
+        Map(m => m.business_city).Name("Business City");
+        Map(m => m.business_state_province).Name("Business State/Province");
+        Map(m => m.business_zip_postal_code).Name("Business Zip/Postal Code");
+        Map(m => m.business_country).Name("Business Country");
+        Map(m => m.date_of_birth).Name("Date of Birth").TypeConverter<MyDateTimeConverter>();
+        Map(m => m.spouse_partner_first_name).Name("Spouse/Partner First Name");
+        Map(m => m.spouse_partner_last_name).Name("Spouse/Partner Last Name");
+        Map(m => m.spouse_partner_nick_name).Name("Spouse/Partner Nick Name");
+        Map(m => m.spouse_partner_date_of_birth).Name("Spouse/Partner Date of Birth").TypeConverter<MyDateTimeConverter>();
+        Map(m => m.anniversary).Name("Anniversary").TypeConverter<MyDateTimeConverter>();
+        Map(m => m.member_no).Name("Member No").TypeConverter<MyInt32Converter>();
+        Map(m => m.website_url).Name("Website URL");
+        Map(m => m.membership).Name("Membership");
+        Map(m => m.office).Name("Office");
+        Map(m => m.sponsor).Name("Sponsor");
+        Map(m => m.date_joined_rotary).Name("Date Joined Rotary").TypeConverter<MyDateTimeConverter>();
+        Map(m => m.date_joined_club).Name("Date Joined Club").TypeConverter<MyDateTimeConverter>();
+        Map(m => m.years_of_service_rotary).Name("Years of Service (Rotary)").TypeConverter<MyInt32Converter>();
+        Map(m => m.years_of_service_club).Name("Years of Service (Club)").TypeConverter<MyInt32Converter>(); ;
+        Map(m => m.personal_url).Name("Personal Url");
+        Map(m => m.termination_date).Name("Termination Date").TypeConverter<MyDateTimeConverter>();
+        Map(m => m.reason_for_termination).Name("Reason For Termination");
+        Map(m => m.date_created).Name("Date Created").TypeConverter<MyDateTimeConverter>();
+        Map(m => m.date_modified).Name("Date Modified").TypeConverter<MyDateTimeConverter>();
+        Map(m => m.last_login).Name("Last Login").TypeConverter<MyDateTimeConverter>();
+        Map(m => m.club_mailing_address).Name("Club Mailing Address");
+        Map(m => m.club_phone).Name("Club Phone");
+        Map(m => m.club_email).Name("Club Email");
+        Map(m => m.club_website).Name("Club Website");
+        Map(m => m.club_fax).Name("Club Fax");
+        Map(m => m.badge_no).Name("Badge No.");
+        Map(m => m.club_area).Name("Club Area");
+        Map(m => m.club_assistant_area_governor).Name("Club Assistant/Area Governor");
+    }
+}
