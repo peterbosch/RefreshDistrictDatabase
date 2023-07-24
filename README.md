@@ -8,6 +8,13 @@ The CSV file is then used to create and populate (or if it already exists, destr
 ## Installation and Setup
 - Clone the repo.
 - Provide your connection string, and the location of the CSV file in App.config
+- [Obtain and install and then)[https://dev.mysql.com/downloads/] launch MySql Community Edition.
+- [Obtain and](https://visualstudio.microsoft.com/vs/community/) launch Visual Studio Community Edition and load the RefreshDistrictDb project.
+- Edit the App.config file to provide your connection string and the location of the CSV file.
+- Build the project.
+- Run the project.
+- If it runs properly, the console window will display the number of rows in the membership table.
+- If it does not run properly, the console window will display an error message.
 
 ## Obligatory
 Downloading a CSV from ClubRunner is a feature that, if you have access to it, is a privilege. Analyzing that data in a database is no different from analyzing it in Excel. Respect and protect it.

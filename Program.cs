@@ -14,11 +14,13 @@ namespace RefreshDistrictDb
 
         static string connectionString;
         static string csvFileName;
+        private static string tableName;
 
         static void Main()
         {
             connectionString = ConfigurationManager.AppSettings["connectionString"];
             csvFileName = ConfigurationManager.AppSettings["csvFileName"];
+            tableName = ConfigurationManager.AppSettings["tableName"];
 
 
             DataTable dt = LoadCSV();
@@ -27,6 +29,9 @@ namespace RefreshDistrictDb
             connection.Open();
             ClearTable(connection);
             LoadTable(dt, connection);
+            Console.WriteLine($"{dt.Rows.Count} rows added to the database.");
+            Console.WriteLine("Press any key to continue.");
+            Console.ReadKey();
         }
 
         /// <summary>
@@ -95,8 +100,9 @@ namespace RefreshDistrictDb
             }
 
             // Recreate the table
+            // TODO: Eliminate the need for this and move the reliance to the Record class.
             string createTableQuery = @"
-                    CREATE TABLE membership (
+                    CREATE TABLE " + tableName + @" (
                         membership_type VARCHAR(255),
                         title VARCHAR(255),
                         first_name VARCHAR(255),
@@ -232,6 +238,7 @@ namespace RefreshDistrictDb
                 Console.Write(ex.StackTrace);
                 Console.WriteLine("Press any key to continue.");
                 Console.ReadKey();
+                throw;
             }
         }
 
