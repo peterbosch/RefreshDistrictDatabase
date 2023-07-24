@@ -8,7 +8,7 @@ The CSV file is then used to create and populate (or if it already exists, destr
 ## Installation and Setup
 - Clone the repo.
 - Provide your connection string, and the location of the CSV file in App.config
-- [Obtain and install and then)[https://dev.mysql.com/downloads/] launch MySql Community Edition.
+- [Obtain and install and then](https://dev.mysql.com/downloads/) launch MySql Community Edition.
 - [Obtain and](https://visualstudio.microsoft.com/vs/community/) launch Visual Studio Community Edition and load the RefreshDistrictDb project.
 - Edit the App.config file to provide your connection string and the location of the CSV file.
 - Build the project.
